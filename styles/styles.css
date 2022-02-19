@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@400;600 & display=swap');
+
+:root{
+    --sub-color: #242635;
+    --color-body: #1f1d2c;
+    --color-text: #fff;
+    --tipo-fuente: 'Inter', sans-serif;
+    --padding : 0.5rem 1.5rem;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--tipo-fuente);
+}
+
+body{
+    background-color: var(--color-body);
+    color: var(--color-text);
+}
+
+nav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: var(--padding);
+    
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: #fff;
+}
+
+input#menu{
+    visibility: hidden;
+    position: relative;
+}
+
+input#menu~ul{
+    background-color: var(--sub-color);
+    width: 100%;
+    list-style: none;
+    height: 58%;
+    position: absolute;
+    right: 100%;
+    transition: all 300ms linear;
+    opacity: 0.8;
+}
+
+input#menu:checked~ul{
+    right: 0;
+}
+
+
+nav>div>div{
+    position: absolute;
+    top: -0.1%;
+    right: 0.1vw;
+    z-index: -1;
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: var(--padding);
+}
+
+nav>div>ul>.home>a{
+    color: #f1a600;
+}
+
+.titulo{
+    padding: var(--padding);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+main{
+    display: flex;
+    padding: var(--padding);
+}
+
+main>div.contenido-principal{
+    width: 50vw;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-gap: 1.5rem;
+    
+}
+
+.experiencia{
+    width: 30vw;
+}
+
+
+ span{
+    color: #f1a600;
+}
+
+.imagen-principal>img{
+    width: 260px;
+}
+
+.imagen-principal{
+    position: absolute;
+    right: 2vw;
+    z-index: -1;
+    padding: 0 1rem;
+}
+
+#acerca-de-mi{
+    background-color: var(--sub-color);
+    padding: 2rem 1rem;
+    margin: 10rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#acerca-de-mi>article{
+    width: 90vw;
+    padding: 1rem 0;
+} 
+
+
+#imagenes-experiencia{
+    background-color: var(--sub-color);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center; 
+   
+}
+
+#imagenes-experiencia>div>img{
+    width: 100px;
+    height: 100px;
+}
+
+#linea-tiempo{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#linea-tiempo>article{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    padding-top: 0.5rem ;
+}
+
+#linea-tiempo>article>.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1rem;   
+}
+
+#linea-tiempo>article>.item>img{
+    width: 108.8px;
+}
+
+#linea-tiempo>article>.linea>img{
+    padding: 2rem 2rem 0 1rem;
+    height: 350px;
+}
+
+
+
+#habilidades{
+    background-image: url("../assets/Vectores/Rectangle 34-1.svg");
+    background-repeat: repeat-y ;
+    background-size: 9rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#habilidades>article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding);
+    
+}
+
+#habilidades>article>div>p{
+    padding: 2rem 0;
+}
+
+
+#habilidades>article>.porcentaje{
+    color: #f1a600;
+}
+
+#habilidades>article>.text{
+    padding-right: 3.5rem;
+}
+
+#portafolio{
+    margin-top: 2rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+#portafolio>article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#portafolio>article>.amarillo{
+    background-color: #f1a600;
+    position: relative;
+    padding: 0.2rem 0.5rem 0 0.5rem;
+    margin: 1rem;
+    right: 4rem;
+}
+
+#portafolio>article>.azul{
+    background-color: var(--sub-color);
+    position: relative;
+    padding: 1rem;
+    padding: 0.2rem 0.5rem 0 0.5rem;
+    margin: 1rem;
+    left: 3.8rem;
+}
+
+#portafolio>article>div>img{
+    position: relative;
+    width: 200px;
+    top: 1.5rem;
+}
+
+#portafolio>article>.text-amarillo{
+    position: relative;
+    margin-top: 0.5rem;
+    right: 5rem;
+}
+
+#portafolio>article>.text-azul{
+    position: relative;
+    margin-top: 0.5rem;
+    left: 3rem;
+}
+
+#contacto{
+    text-align: center;
+    background-color: var(--sub-color);
+    padding: 2rem 0 3rem;
+}
+
+#contacto>article{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contacto>article{
+    position: relative;
+    padding: 2rem 1rem;
+}
+
+#contacto>article>div>h4{
+    padding: 1rem 0 0.2rem 0;
+}
+
+#contacto>article>.mail{
+    position: relative;
+    top: 2rem;
+}
+
+h5{
+    color: darkgray;
+}
+
+footer{
+    padding: 1rem;
+    text-align: center;
+}
+
+@media only screen and (min-width:769px) {
+    body{
+        font-size: 18px;
+    }
+
+    .titulo{
+        padding: var(--padding);
+        font-size: 150px;
+    }
+
+    h2{
+        font-size: 50px;
+    }
+
+    main{
+        font-size: 45px;
+        padding: 4rem;
+    }
+
+    nav>div>label{
+        display: none;
+    }
+
+    input#menu~ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    input#menu~ul>li{
+        padding: 0.5rem;
+    }
+
+    nav>div>div>img{
+        width: 620px;
+    }
+
+    .titulo{
+        margin: 0 6vw;
+    }
+    main>div.contenido-principal{
+        width: 40rem;
+        margin: 0 4vw;
+    }
+
+    main>div>div>a>img{
+        width: 70px;
+    }
+
+    .imagen-principal{
+        margin: 0 2vw;
+    }
+
+
+    .imagen-principal>img{
+        width: 32rem;  
+    }
+
+    
+    #acerca-de-mi>article{
+        width: 75vw;
+        padding: 1rem 0;
+    } 
+
+    #imagenes-experiencia{
+        padding-bottom: 4rem;
+    }
+
+    #linea-tiempo{
+        padding: 2rem 8rem;
+    }
+
+    #habilidades{
+        padding: 2rem 13rem;
+        background-size: 20rem;
+    }
+
+    #habilidades>article>.porcentaje>p{
+        font-size: 30px;
+    }
+
+    #habilidades>article>.text>p{
+        padding-top: 2.8rem;
+    }
+
+    #portafolio>article>.amarillo{
+        right: 9rem;
+        padding: 0.2rem 0.7rem 0 0.7rem;
+    }
+    
+    #portafolio>article>.azul{
+        left: 8rem;
+        padding: 0.2rem 0.7rem 0 0.7rem;
+    }
+
+    #portafolio>article>div>img{
+        width: 300px; 
+    }
+
+    #portafolio>article>.text-amarillo{
+        right: 9rem;
+    }
+    
+    #portafolio>article>.text-azul{
+        left: 8rem;
+    }
+
+    
+    #contacto>article{
+        justify-content: space-around;
+    }
+    
+    footer{
+        padding: 4rem;
+    }
+}
